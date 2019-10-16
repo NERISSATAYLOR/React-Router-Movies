@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import MovieList from './MovieList';
 
 const SavedList = props => {
   // function routeToMovie(props, movie) {
@@ -10,6 +12,8 @@ const SavedList = props => {
       {props.list.map(movie => (
         <span className="saved-movie">{movie.title}</span>
       ))}
+
+      <NavLink to="/" activeClassName="activeNavButton">Home</NavLink>
     </div>
   );
 }
